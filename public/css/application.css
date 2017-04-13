@@ -1,0 +1,125 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+	text-align: center;
+}
+
+#todo {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.todo h2 {
+	font-size: 14px;
+	width: 100%;
+}
+
+.todos-wrapper {
+	display: flex;
+	margin-top: 40px;
+	width: 100%;
+	flex-wrap: wrap;
+	flex: 1;
+}
+
+.todo-add {
+	position: relative;
+	top: -2px;
+	height: 30px;
+}
+
+.complete-footer {
+	border-right: 1px solid lightgrey;
+	background-color: seagreen;
+}
+
+.delete-footer {
+	background-color: indianred;	
+}
+
+.todo {
+	border: 1px solid lightgrey;
+	text-align: center;
+	padding: 10px;
+	cursor: move;
+	flex: auto;
+	display: flex;
+	align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.todo.move {
+	border: 2px solid crimson;
+}
+
+.todo_input {
+	border: 1px solid lightgrey;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+footer {
+	display: flex;
+}
+
+.footer-item {
+	flex: auto;
+	text-align: center;
+	padding: 20px 0;
+	border-top: 1px solid lightgrey;
+	color: white;
+	text-transform: uppercase;
+}
+
+footer h4 {
+	display: block;
+}
+
+.toolbox {
+  text-align: center;
+}
+
+.todo_list {
+	padding: 0;
+	margin: 0;
+}
+
+.todo h2.completed {
+  text-decoration: line-through;
+}
+
+.done {
+	display: none;
+}
+
+li {
+	list-style: none;
+}
+
+a, input[type="submit"] {
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	min-width: 80px;
+	display: inline-block;
+	text-align: center;
+	border: 0;
+}
+
+a.delete {
+	background-color: indianred;
+	margin-bottom: 10px;
+}
+
+a.complete, input[type="submit"] {
+	background-color: seagreen;
+}

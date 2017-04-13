@@ -1,0 +1,9 @@
+<div class="todo" id="<%= @todo.id %>">
+  <h2 class="<%= @todo.completed ? 'completed' : 'incomplete' %>"><%= @todo.todo_content %></h2>
+  <ul class="todo_list">
+    <li><a href="/todo/<%= @todo.id %>" class="delete">Delete</a></li>
+    <% if @todo.completed == false %>
+      <li><a href="/todo/<%= @todo.id %>/completed" class="complete">Complete</a></li>
+    <% end %>
+  </ul>
+</div>

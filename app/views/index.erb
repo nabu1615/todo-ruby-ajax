@@ -1,0 +1,32 @@
+<div id="todo">
+  <div class="toolbox">
+    <form id="form" action="/add_todo" method="post">
+      <input type="text" id="todo_name" required name="name" class="todo_input" placeholder="Put your todo item here!"/>
+      <input type="submit" class="todo-add" value="Add Todo"/>
+    </form>
+    <p class="done">¡Tu Todo ha sido creado con exito!</p>
+  </div>
+
+  <div class="todo_list">
+
+  </div>
+
+  <div id="todo_template" class="todos-wrapper">
+    <% @todos.each do |todo| %>
+    <div class="todo" id="<%= todo.id %>" draggable="true">
+      <h2 class="<%= todo.completed ? 'completed' : 'incomplete' %>"><%= todo.todo_content %></h2>
+      <ul class="todo_list">
+        <li><a href="/todo/<%= todo.id %>" class="delete">Delete</a></li>
+        <% if todo.completed == false %>
+          <li><a href="/todo/<%= todo.id %>/completed" class="complete">Complete</a></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+  <h4>Arastra tus Todos para Completar o Eliminar</h4>
+  <footer>
+    <div class="footer-item complete-footer">Completar</div>
+    <div class="footer-item delete-footer">Eliminar</div>
+  </footer>
+</div>
